@@ -1,0 +1,604 @@
+/** global **/
+body {
+	background:#064D83 url('http://www.games.dcu.ie/images/body_bg.png') repeat-x;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#FFF;
+	margin:0 auto;
+	padding:0;
+}
+* {
+	margin:0;
+	padding:0;
+}
+
+#loading {
+	padding:10px 15px;
+	background:#033155;
+	border: 1px solid #FFF;
+	color:white;
+	display:none;
+	width: 640px;
+} 
+
+#textRight	{
+	float: right;
+}
+
+/** element defaults **/
+table {
+	margin: 8px;
+	width:100%;
+	font-size:11px;
+}
+code, blockquote {
+	display:block;
+	border-left:5px solid #ddd;
+	padding:10px;
+	margin-bottom:20px;
+}
+blockquote p {
+	font-style:italic;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	margin:0;
+	height: 1%;
+}
+td.table-cell-on
+{
+		text
+	    background-color: #465977;  
+		border: 1px solid white;
+		padding: 5px 8px;
+}
+
+td.table-cell-off
+{
+	    background-color: #1d2c4c;		    
+	    border: 1px solid white;
+	    padding: 5px 8px;
+}
+p {
+	line-height:1.9em;
+	margin-bottom:20px;
+}
+a {
+	color:#FFFFFF;
+}
+a:hover {
+	color:#F66605;
+}
+a:focus {
+	color:#000;
+	outline:none;
+}
+fieldset {
+	display:block;
+	border:none;
+	border-top:1px solid #e0e0e0;
+}
+fieldset legend {
+	font-weight:bold;
+	font-size:13px;
+	padding-right:10px;
+	color:#fff;
+}
+fieldset form {
+	padding-top:15px;
+}
+fieldset p label {
+	float:left;
+	width:150px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+fieldset form input, fieldset form select, fieldset form textarea {
+	padding:5px;
+	color:#CCC;
+	font-size:13px;
+	font-family:Arial, Helvetica, sans-serif;
+	border:1px solid #ddd;
+}
+form input.formbutton {
+	margin-left:150px;
+	background:#FE8100;
+	border:none;
+	font-family:Arial, Helvetica, sans-serif;
+	border-bottom:3px solid #F66605;
+	color:#ffffff;
+	font-weight:bold;
+	padding:5px 10px;
+	font-size:12px;
+}
+h1 {
+	font-size:45px;
+}
+h2 {
+	color:#2f2f2f;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:30px;
+	font-weight:bold;
+	letter-spacing:-2px;
+}
+h3 {
+	color:#FFFFFF;
+	font-size:20px;
+}
+h4 {
+	padding-bottom:10px;
+	font-size:15px;
+	color:#F00;
+}
+h5 {
+	padding-bottom:10px;
+	font-size:13px;
+	color:#FFFFFF;
+}
+ul, ol {
+	margin:0 0 35px 35px;
+}
+
+
+
+
+li {
+	padding-bottom:5px;
+}
+
+/** wrapper **/
+div#wrapper {
+	width:960px;
+	margin:0 auto;
+	padding:0;
+}
+
+/** sitename+nav **/
+div#top {
+	height:64px;
+	background-image: url('http://www.games.dcu.ie/images/body_bg.png');
+}
+div#top h1 {
+	float:left;
+	font-size:34px;
+	padding-top:-40px;
+	position: absolute;
+}
+div#top h1 a {
+	color:#666;
+	font-weight:normal;
+	letter-spacing:-4px;
+	float:left;
+	text-decoration:none;
+}
+div#top ul {
+	background-image: url('http://www.games.dcu.ie/images/menu_bg.png');
+	background-repeat:no-repeat;
+	background-position:right top;
+	padding-top:39px;
+	float:right;
+	list-style:none;
+	margin:0 25px 0;
+}
+div#top ul li {
+	float:left;
+	display:block;
+	padding:0;
+	margin-top: 8px;
+	color:#fff;
+}
+div#top ul li {
+	padding:2px;
+}
+div#top ul li a {
+	padding:10px 15px;
+	float:left;
+	text-decoration:none;
+	display:block;
+	color:#fff;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+}
+
+
+/** Main content area **/
+div#maincontent {
+	background-color:#064D83;
+	padding:10px 10px 0px 10px;
+	margin-top:36px;
+}
+
+/** content+sidebar styles **/
+div#content {
+	width:675px;
+	font-size:12px;
+	display:inline;
+}
+div#content img {
+	max-width: 652px;
+	text-align: centre;
+}
+div#content h2 {
+	background-image: url('http://www.games.dcu.ie/images/content_title_bg.png');
+}
+div#content h2 a.title{
+	margin-left: 8px;
+	text-decoration: none;
+	color: #FFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:17px;
+}
+
+div#content p a.right{
+	margin-top: -20px;
+	float: right;
+	text-decoration: none;
+	color: #FFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	letter-spacing: 0.5px;
+	font-size:10px;
+	font-weight: bold;
+}
+
+div#content h2  a {
+	background-color: #FFF;
+	color: #FFF;
+}
+
+div#content h2 div {
+	float: right;
+	margin-right: 8px;
+	margin-top: 9px;
+	color: #F00;
+	background-color: #FFF;
+	background-image: none;
+	text-decoration: none;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	letter-spacing: 0.3px;
+	font-size:9px;
+	text-align: right;
+}
+
+div#content hr{
+	margin-left: 16px;
+	margin-right: 16px;
+}
+div#content div{
+	background-image: url('http://www.games.dcu.ie/images/news_content_bg.png');
+	color: #FFF;
+	margin-top: 20px;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-bottom: 1px;
+	/*border-radius: 15px;*/
+	margin-bottom: 30px;
+}
+div#text{
+	margin-top: 4px;
+	margin-left: 12px;
+	margin-right: 12px;
+	margin-bottom: 8px;
+	padding-bottom: 8px;
+}
+
+div#transparentbox {
+	text-align: right;
+	background-color:#ffffff;
+	border:4px solid black;
+	width: 644px;
+	margin-top: -68px;
+	/* for IE */
+	filter:alpha(opacity=60);
+	/* CSS3 standard */
+	opacity:0.6;
+}
+div#transparentbox  h3{
+	color: #FFF;
+	margin-top: 4px;
+	margin-right: 4px;
+	padding-bottom: -8px;
+}
+div#transparentbox  a{
+	color: #FFF;
+	margin-right: 4px;
+}
+div#transparentbox  i{
+	color: #FFF;
+	margin-right: 4px;
+}
+
+div#text a{
+	color: #FFF;
+	font-weight: bold;
+}
+
+div#text a.expander{
+	float: right;
+	margin-top: 2px;
+}
+
+div#content p{
+	margin-left: 24px;
+	margin-right: 24px;
+	color: #FFF;
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+div#posts {
+	width:430px;
+	font-size:12px;
+	margin-left: 4px;
+}
+div#posts h2 {
+	background-image: url('http://www.games.dcu.ie/images/post_title_bg.png');
+}
+div#posts h2 a{
+	margin-left: 8px;
+	text-decoration: none;
+	color: #F00;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:18px;
+	font-weight:bold;
+}
+div#posts div{
+	background-image: url('http://www.games.dcu.ie/images/post_content_bg.png');
+}
+div#posts p{
+	margin-left: 8px;
+	margin-right: 8px;
+	color: #FFF;
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+div#posts table {
+	padding: 8px;
+}
+
+div#posts td {
+	color: #FFF;
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+div.column-left {
+	float:left;
+	margin-right:20px;
+	clear: left;
+}
+div.column-right {
+	float:right;
+}
+div.column-centre {
+	float: left;
+}
+div#sidebar {
+	width:230px;
+}
+
+div#sidebar img {
+	border: 0px;
+}
+
+div#sidebar ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+div#sidebar li ul {
+	border-top:1px solid #ddd;
+	margin-bottom:20px;
+	background-image: url('http://www.games.dcu.ie/images/ul_bg.png');
+}
+div#sidebar li ul p {
+	display:block;
+	padding:7px 15px;
+	border-bottom:1px solid #ddd;
+	color:#FFF;
+}
+div#sidebar li ul p a {
+	text-decoration:none;
+	font-family:"Trebuchet MS", Verdana, Arial;
+	font-weight:bold;
+	color: #FFF;
+	font-style: normal;
+}
+div#sidebar li ul p a:hover {
+	text-decoration:underline;
+}
+div#sidebar li ul li {
+	display:block;
+	padding:7px 15px;
+	border-bottom:1px solid #ddd;
+	color:#FFF;
+	font-style: italic;
+}
+div#sidebar li ul li a {
+	text-decoration:none;
+	font-family:"Trebuchet MS", Verdana, Arial;
+	font-weight:bold;
+	color: #FFF;
+	font-style: normal;
+}
+div#sidebar li ul li a:hover {
+	text-decoration:underline;
+}
+div#sidebar table{
+	margin: 8px;
+	width:100%;
+	font-size:11px;
+}
+div#sidebar h4 { 
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	color:#FFFFFF;
+	margin:0;
+	padding:4px 10px;
+	background-image: url('http://www.games.dcu.ie/images/h4_bg.png');
+}
+
+
+/** footer **/
+div#footer {
+	background-color:#222;
+	padding:10px;
+	color:#999;
+	margin-top: 30px;
+}
+div#footer a {
+	color:#999;
+	font-weight:bold;
+	text-decoration:underline;
+}
+div#footer h4 {
+	color:#999;
+	font-size:18px;
+}
+div#footer form {
+	margin:0;
+	padding:0;
+}
+div#footer form input#searchbutton {
+	background-color:#111;
+	border-bottom:none;
+	margin:0;
+}
+div#footer form input#searchquery {
+	background-color:#333;
+	color:#fff;
+	font-family:Arial, Helvetica, sans-serif;
+	border:none;
+	padding:5px 5px 6px;
+}
+div#footer ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+	border-top:1px solid #333;
+}
+div#footer ul li {
+	padding:0;
+}
+div#footer ul li a {
+	text-decoration:none;
+	display:block;
+	padding:7px 10px;
+	border-bottom:1px solid #333;
+}
+div#footer ul li a:hover {
+	background-color:#1f1f1f;
+}
+div.footer-box {
+	width:220px;
+	margin-right:20px;
+	float:left;
+}
+div.end-footer-box {
+	margin-right:0;
+}
+div#footer-links {
+	background-color: #697b99;
+	color:#ffffff;
+	padding:5px;
+}
+
+div#footer-links p {
+	text-align:right;
+	padding:0;
+	margin:0;
+	font-size:10px;
+}
+div#footer-links a {
+	color:#fff;
+	font-weight:bold;
+	text-decoration:underline;
+}
+
+/** clear **/
+.clear:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clear {
+	display: inline-block;
+}
+.clear {
+	display: block;
+}
+
+/* News loop */
+#carousel {  
+    width:430px;  
+    height:250px;
+	padding-bottom: 48px;
+	margin-top: -32px;
+}  
+  
+#slides {  
+    overflow:hidden;  
+    /* fix ie overflow issue */  
+    position:relative;  
+    width:430px;  
+    height:250px;  
+    border:1px solid #ccc;  
+}  
+  
+/* remove the list styles, width : item width * total items */    
+#slides ul {  
+    position:relative;  
+    left:0;  
+    top:0;  
+    list-style:none;  
+    margin:0;  
+    padding:0;    
+    width:750px;              
+}  
+  
+/* width of the item, in this case I put 250x250x gif */  
+#slides li {  
+    width:430px;  
+    height:250px;     
+    float:left;  
+}  
+  
+#slides li img {  
+    padding:5px;  
+}  
+  
+/* Styling for prev and next buttons */  
+#buttons {  
+    padding:0 0 5px 0;    
+    float:right;  
+}  
+  
+#buttons a {  
+    display:block;   
+    width:31px;   
+    height:32px;  
+    text-indent:-999em;  
+    float:left;  
+    outline:0;  
+}  
+  
+a#prev {  
+    background:url(arrow.gif) 0 -31px no-repeat;   
+}  
+  
+a#prev:hover {  
+    background:url(arrow.gif) 0 0 no-repeat;  
+}  
+  
+a#next {  
+    background:url(arrow.gif) -32px -31px no-repeat;   
+}  
+  
+a#next:hover {  
+    background:url(arrow.gif) -32px 0 no-repeat;  
+}  
+  
+.clear {clear:both}  
